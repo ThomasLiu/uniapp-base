@@ -1,0 +1,9 @@
+templates:
+  template.yml:
+    demo1:
+      testFunc:
+        event: default_evt
+        events:
+          default_evt:
+            type: file
+            value: demo1/testFunc/event.evt

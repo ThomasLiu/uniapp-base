@@ -82,7 +82,19 @@
     "miniprogram-api-typings": "*",
     "postcss-comment": "^2.0.0",
     "typescript": "^3.0.0",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-plugin-html": "^6.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.1.2",
+    "eslint": "^7.10.0",
+    "eslint-plugin-vue": "^6.2.2",
+    "stylelint": "^13.6.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-scss": "^3.18.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11"
   },
   "browserslist": [
     "Android >= 4",
@@ -90,5 +102,14 @@
   ],
   "uni-app": {
     "scripts": {}
+  },
+  "lint-staged": {
+    "*.{js,vue}": "eslint",
+    "*.{css,vue}": "stylelint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
